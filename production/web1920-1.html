@@ -1,0 +1,1709 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title> RankSense </title>
+
+    
+    <!-- Bootstrap -->
+    <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
+    <!-- iCheck -->
+    <link href="../vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+    <!-- Ion.RangeSlider -->
+    <link href="../vendors/normalize-css/normalize.css" rel="stylesheet">
+    <link href="../vendors/ion.rangeSlider/css/ion.rangeSlider.css" rel="stylesheet">
+    <link href="../vendors/ion.rangeSlider/css/ion.rangeSlider.skinFlat.css" rel="stylesheet">
+    <!-- bootstrap-progressbar -->
+    <link href="../vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+    <!-- JQVMap -->
+    <link href="../vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet"/>
+
+    <!-- Custom Theme Style -->
+    <link href="../build/css/custom.css" rel="stylesheet">
+
+    <!-- My Custom Theme Style -->
+    <link href="css/custom.css" rel="stylesheet">
+
+    <!-- Datatables -->
+    <link href="../vendors/datatables.net-bs/css/dataTables.bootstrap.css" rel="stylesheet">
+    <link href="../vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css" rel="stylesheet">
+    <link href="../vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css" rel="stylesheet">
+    <link href="../vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
+    <link href="../vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Bootstrap Colorpicker -->
+    <link href="../vendors/mjolnic-bootstrap-colorpicker/dist/css/bootstrap-colorpicker.min.css" rel="stylesheet">
+
+    <link href="../vendors/cropper/dist/cropper.min.css" rel="stylesheet">
+  </head>
+  </head>
+
+  <body class="nav-md">
+    <div class="container body">
+      <div class="main_container">
+
+<!-- -----------------------------------  Project Settings Dialog  ------------------------------------------------- -->        
+
+        <div class="modal fade modal-project-settings" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+
+<!-- -----------------------------------  Project Settings Dialog Header  ------------------------------------------------- -->        
+
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title text-color-blue"> Project Settings for www.garrettewade.com </h4>
+              </div>
+              <div class="modal-body">
+                <div class="modal-body-header">
+                  <div class="row">
+                    <div class="col-md-2 col-md-offset-2">
+                      <span class="active" panel="#modalBodyGeneral"> General </span>
+                    </div>
+                    <div class="col-md-2">
+                      <span panel="#modalBodySnippets"> Snippets </span>
+                    </div>
+                    <div class="col-md-2">
+                      <span panel="#modalBodyServices"> Services </span>
+                    </div>
+                    <div class="col-md-2">
+                      <span panel="#modalBodyDelete"> Delete </span>
+                    </div>
+                  </div>
+                </div>
+
+<!-- -----------------------------------  /Project Settings Dialog Header  ------------------------------------------------- -->        
+
+                <div class="modal-body-content">
+
+<!-- -----------------------------------  General Tab  ------------------------------------------------- -->        
+
+                  <div id="modalBodyGeneral" class="modal-body-tab">
+                    <label class="text-color-blue" for="name">Project Name <span class="required">*</span> </label>
+                    <span class="modal-input"> www.upwork.com </span>
+                    <br><br>
+                    <p> This is the name of your project and how it should be displayed with your onpage.org account </p>
+                    <br><br>
+                    <label class="text-color-blue" for="name">Project Slug <span class="required">*</span> </label>
+                    <span class="modal-input"> www.upwork.com </span>
+                    <br><br>
+                    <p> This is the short notation of your project and how it is displayed within the url </p>
+                    <br><br>
+                    <label class="text-color-blue" for="name">Project CMS </label>
+                    <span class="modal-input"> no CMS selected <span class="fa fa-chevron-down bound-arrow"> </span> </span>
+                    
+                    <br><br>
+                    <p> * Please note that you can only adjust the display of the chosen project here. The domain persists unchanged. </p>
+                    <br><br>
+                    <p> If you want to analyze a different domain please follow one of the two available options: <br>
+                        Remove the existing project via the [delete] tab (Please note that by deleting a project the historical project will be get lost) <br>
+                        Add a new additional project
+                    <p>
+                  </div>
+
+<!-- -----------------------------------  /General Tab  ------------------------------------------------- -->
+
+<!-- -----------------------------------  Snippets Tab  ------------------------------------------------- -->
+
+                  <div id="modalBodySnippets" class="modal-body-tab invisible">
+                    <div class="col-md-4 upgrade-left">
+                      <div class="upgrade-item">
+                        <span> Custom Counts </span>
+                        <span class="fa fa-chevron-right arrow-yellow"> </span>
+                      </div>
+
+                      <div class="upgrade-item">
+                        <span> Custom Fields </span>
+                        <span class="fa fa-chevron-right arrow-yellow"> </span>
+                      </div>
+
+                      <div class="upgrade-item">
+                        <span> Test a Selector </span>
+                        <span class="fa fa-chevron-right arrow-yellow"> </span>
+                      </div>
+                    </div>
+
+                    <div class="col-md-8">
+                      <p> Custom counts enable you to count specific contents, code or any parts of the html code
+                        We will count the occurrences of these snippets on each of your pages. </p>
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th>Name</th>
+                            <th>Selector</th>
+                            <th>Mode</th>
+                            <th>Created</th>
+                          </tr>
+                        </thead>
+
+                        <tbody>
+                          <tr>
+                            <td> <span class="round-rect-input"> Name </span> </td>
+                            <td> <span class="round-rect-input"> Selector </span> </td>
+                            <td> <span class="custom-dropdown"> Regex:Search in text <span class="fa fa-chevron-down bound-arrow"> </span> </span> </td>
+                            <td> <span class="fa fa-check"> </span> </td>
+                          </tr>
+
+                          <tr>
+                            <td> <span> Name</span> </td>
+                            <td> <span> Selector </span> </td>
+                            <td> <span> Regex:Search in text </span> </td>
+                            <td> <span> 02.10.2016 </span> <span class="fa fa-remove"> </span> </td>
+                          </tr>
+
+                          <tr>
+                            <td> <span> Name</span> </td>
+                            <td> <span> Selector </span> </td>
+                            <td> <span> Regex:Search in text </span> </td>
+                            <td> <span> 02.10.2016 </span> <span class="fa fa-remove"> </span> </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
+<!-- -----------------------------------  .Snippets Tab  ------------------------------------------------- -->
+
+<!-- -----------------------------------  Services Tab  ------------------------------------------------- -->
+
+                  <div id="modalBodyServices" class="modal-body-tab invisible">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                      <p> You can add external services to your project here </p>
+                      <img class="google-button" src="images/google_button.png">
+                    </div>
+                  </div>
+
+<!-- -----------------------------------  /Services Tab  ------------------------------------------------- -->
+
+<!-- -----------------------------------  Delete Tab  ------------------------------------------------- -->
+
+                  <div id="modalBodyDelete" class="modal-body-tab invisible">
+                    <div class="col-md-8 col-md-offset-2">
+                      <p>
+                        You are on your way to cancel the project www.upwork.com. Are you sure you want to cancel it?
+                        The deletion of a project results in a hotel reset of all data. If you re-monitor this project
+                        at another time, all data will be need to recollected(like optimization levels, competitors
+                        intelligence, keyword statistics, favorite pages, segments, etc.).
+
+                        <br><br>
+                        After you delete this project, you will be able to create a new one.
+                      </p>
+
+                      <p> <span class="fa fa-remove"> </span> <br> Delete Project </p>
+                    </div>
+                  </div>  
+
+<!-- -----------------------------------  /Delete Tab  ------------------------------------------------- -->
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+<!-- -----------------------------------  /Project Settings Dialog  ------------------------------------------------- -->        
+
+
+<!-- -----------------------------------  Account Settings Dialog  ------------------------------------------------- -->        
+
+        <div class="modal fade modal-account-settings" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+
+<!-- -----------------------------------  Account Settings Dialog Header ------------------------------------------------- -->
+
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title text-color-blue">Account Settings for Hamlet Batista</h4>
+              </div>
+              <div class="modal-body">
+                <div class="modal-body-header">
+                  <div class="row">
+                    <div class="col-md-2 col-md-offset-2">
+                      <span class="active" panel="#modalBodyProjects"> Projects </span>
+                    </div>
+                    <div class="col-md-2">
+                      <span panel="#modalBodyUpgrades"> Upgrades </span>
+                    </div>
+                    <div class="col-md-2">
+                      <span panel="#modalBodyPayments"> Payments </span>
+                    </div>
+                    <div class="col-md-2">
+                      <span panel="#modalBodyInvoices"> Invoices </span>
+                    </div>
+                  </div>
+                </div>
+
+<!-- -----------------------------------  /Account Settings Dialog Header ------------------------------------------------- -->
+
+                <div class="modal-body-content">
+
+<!-- -----------------------------------  Projects Panel ------------------------------------------------- -->
+                  <div id="modalBodyProjects" class="modal-body-tab">
+                    <div class="col-lg-4">
+                      <span class="category"> Projects: <span class="of"> 1 of 1 </span> <span class="fa fa-arrow-up"> </span> </span>
+
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <td> Project </td>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td> www.garrettewade.com </td>
+                          </tr>
+                          <tr>
+                            <td> www.garrettewade.com </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <div class="col-lg-4">
+                      <span class="category"> URLs <span class="of"> 100 of 100 </span> <span class="fa fa-arrow-up"> </span> </span>
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <td> Last Crawl </td>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>
+                              <span class="fa fa-refresh"> </span>
+                              <span class="crawl-date"> 
+                                20.09.2016 <br>
+                                Available 19.10.2016
+                              </span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <span class="fa fa-refresh"> </span>
+                              <span class="crawl-date"> 
+                                20.09.2016 <br>
+                                Available 19.10.2016
+                              </span>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <div class="col-lg-4">
+                      <span class="category" style="visibility: hidden;"> URLs <span class="of"> 100 of 100 </span> <span class="fa fa-arrow-up"> </span> </span>
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <td> URLs </td>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>
+                              <a href="javascript:;" class="website-url dropdown-toggle" data-toggle="dropdown" aria-expanded="true"> 
+                                <span class="custom-dropdown"> <span class="text"> 100 (Recommended) </span> <span class="fa fa-chevron-down bound-arrow"> </span> </span> 
+                              </a>
+                              <ul class="dropdown-menu dropdown-usermenu pull-right">
+                                <li> <a href="javascript:;" onclick="$(this).parent().parent().parent().find('.text').text('100 (Recommended)');"> 100 (Recommended) </a> </li>
+                                <li> <a href="javascript:;" onclick="$(this).parent().parent().parent().find('.text').text('101');"> 101 </a> </li>
+                              </ul>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td> 
+                              <a href="javascript:;" class="website-url dropdown-toggle" data-toggle="dropdown" aria-expanded="true"> 
+                                <span class="custom-dropdown"> <span class="text"> 100 (Recommended) </span> <span class="fa fa-chevron-down bound-arrow"> </span> </span> 
+                              </a>
+                              <ul class="dropdown-menu dropdown-usermenu pull-right">
+                                <li> <a href="javascript:;" onclick="$(this).parent().parent().parent().find('.text').text('100 (Recommended)');"> 100 (Recommended) </a> </li>
+                                <li> <a href="javascript:;" onclick="$(this).parent().parent().parent().find('.text').text('101');"> 101 </a> </li>
+                              </ul>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
+<!-- -----------------------------------  /Projects Panel ------------------------------------------------- -->
+
+<!-- -----------------------------------  Upgrades Panel ------------------------------------------------- -->
+
+                  <div id="modalBodyUpgrades" class="modal-body-tab invisible">
+                    <div class="col-md-4 upgrade-left">
+                      <div class="upgrade-item">
+                        <span> Crawl-Volume </span>
+                        <span class="circle-number"> 0 </span>
+                      </div>
+
+                      <div class="upgrade-item">
+                        <span> Keyword-Monitoring </span>
+                        <span class="circle-number"> 0 </span>
+                      </div>
+
+                      <div class="upgrade-item">
+                        <span> Projects </span>
+                        <span class="circle-number"> 0 </span>
+                      </div>
+
+                      <div class="upgrade-item">
+                        <span> Users </span>
+                        <span class="circle-number"> 0 </span>
+                      </div>
+                    </div>
+
+                    <div class="col-md-8">
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th>Date</th>
+                            <th>Name</th>
+                            <th>Price</th>
+                            <th>Actions</th>
+                          </tr>
+                        </thead>
+                      </table>
+
+                      <p>
+                        Unfortunately there is no upgrade available for your account type
+                        <span class="fa fa-plus btn-continue">
+                          <span> Continue </span>
+                        </span>
+                      </p>
+                    </div>
+                  </div>
+
+<!-- -----------------------------------  /Upgrades Panel ------------------------------------------------- -->
+
+<!-- -----------------------------------  Payments Panel ------------------------------------------------- -->
+
+                  <div id="modalBodyPayments" class="modal-body-tab invisible">
+                    <div class="col-md-6">
+                      <table class="table">
+                        <tbody>
+                          <tr>
+                            <td> Company: </td>
+                            <td> RankSense </td>
+                          </tr>
+                          <tr>
+                            <td> Address: </td>
+                            <td>
+                              Demo Account <br>
+                              00000 Demo <br>
+                              US
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <div class="col-md-6">
+                      <table class="table">
+                        <tbody>
+                          <tr>
+                            <td> Invoice Recipient: </td>
+                            <td> Hamlet Batista </td>
+                          </tr>
+
+                          <tr>
+                            <td> Invoice Language: </td>
+                            <td>
+                              <a href="javascript:;" class="website-url dropdown-toggle" data-toggle="dropdown" aria-expanded="true"> 
+                                <span class="custom-dropdown"> <span class="language"> English </span> <span class="fa fa-chevron-down bound-arrow"> </span> </span> 
+                              </a>
+                              <ul class="dropdown-menu dropdown-usermenu pull-right">
+                                <li> <a href="javascript:;" onclick="$('.language').text('English');"> English </a> </li>
+                                <li> <a href="javascript:;" onclick="$('.language').text('Spanish');"> Spanish </a> </li>
+                                <li> <a href="javascript:;" onclick="$('.language').text('Germany');"> Germany </a> </li>
+                                <li> <a href="javascript:;" onclick="$('.language').text('French');"> French </a> </li>
+                                <li> <a href="javascript:;" onclick="$('.language').text('Italian');"> Italian </a> </li>
+                                <li> <a href="javascript:;" onclick="$('.language').text('Russian');"> Russian </a> </li>
+                              </ul>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td> Invoice E-mail: </td>
+                            <td> Not set <span class="fa fa-chevron-right right-align"> </td>
+                          </tr>
+
+                          <tr>
+                            <td> VAT ID: </td>
+                            <td> Demo <span class="fa fa-chevron-right right-align"> </td>
+                          </tr>
+
+                          <tr>
+                            <td> Payment type: </td>
+                            <td> Invoice <span class="fa fa-chevron-right right-align"> </td>
+                          </tr>                          
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
+<!-- -----------------------------------  /Payments Panel ------------------------------------------------- -->
+
+<!-- -----------------------------------  Invoices Panel ------------------------------------------------- -->
+
+                  <div id="modalBodyInvoices" class="modal-body-tab invisible">
+                    <div class="col-md-12">
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <td> Invoice </td>
+                            <td> Billing date </td>
+                            <td> Total amount </td>
+                            <td> Status </td>
+                          </tr>
+                        </thead>
+                      </table>
+                      <p> You don't have any invoices yet </p>
+                    </div>
+                  </div>
+
+<!-- -----------------------------------  /Invoices Panel ------------------------------------------------- -->
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+<!-- -----------------------------------  /Account Settings Dialog  ------------------------------------------------- -->        
+
+
+<!-- -----------------------------------  Left Menu  ------------------------------------------------- -->        
+
+        <div class="col-md-3 left_col">
+          <div class="left_col scroll-view">
+            <div class="navbar nav_title" style="border: 0;">
+              <a class="site_title">
+                <img src="images/logo.png">
+                <img class="logo-text" src="images/logotext.png">
+                <img id="menu_toggle" class="hamburger pull-right" src="images/hamburger.png">
+              </a>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <!-- sidebar menu -->
+            <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+              <div class="menu_section">
+                <ul class="nav side-menu">
+                  <li class="active">
+                    <a>
+                      <img class="label-img" src="images/opportunity.png"> 
+                      <div class="label-content">
+                        <span class="nav-label"> Opportunity </span> <br>
+                        <span class="nav-label hint"> where are the gaps? </span>
+                      </div>
+                      <span class="fa arrow"></span>
+                    </a>
+
+                    <ul class="nav child_menu" style="display: block;">
+                      <li><a href="#">SEO Pipeline</a></li>
+                      <li><a href="#">SEO Issues</a></li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <a>
+                      <img class="label-img" src="images/performance.png"> 
+                      <div class="label-content">
+                        <span class="nav-label"> Performance </span> <br>
+                        <span class="nav-label hint"> how are we doing? </span>
+                      </div>
+                      <span class="fa arrow"></span>
+                    </a>
+                    <ul class="nav child_menu">
+                      <li><a href="#">Pages getting visitors</a></li>
+                      <li><a href="#">Annotated timeline</a></li>
+                      <li><a href="#">By page type</a></li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <a>
+                      <img class="label-img" src="images/scorecard.png"> 
+                      <div class="label-content">
+                        <span class="nav-label"> Scorecard </span> <br>
+                        <span class="nav-label hint"> what's left to do? </span>
+                      </div>
+                      <span class="fa arrow"></span>
+                    </a>
+                    <ul class="nav child_menu">
+                      <li><a href="#">Overview</a></li>
+                      <li>
+                        <a>Page Audit</a>
+                        <ul class="nav child_menu third_level">
+                          <li><a href="#">Missing tags</a></li>
+                          <li><a href="#">Duplicate tags</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <a>
+                      <img class="label-img" src="images/alerts.png"> 
+                      <div class="label-content">
+                        <span class="nav-label"> Alerts </span> <br>
+                        <span class="nav-label hint"> what needs immediate attention? </span>
+                      </div>
+                      <span class="fa arrow"></span>
+                    </a>
+                    <ul class="nav child_menu">
+                      <li><a href="#">Tables</a></li>
+                      <li><a href="#">Table Dynamic</a></li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <a>
+                      <img class="label-img" src="images/changecontrol.png"> 
+                      <div class="label-content">
+                        <span class="nav-label"> Change Control </span> <br>
+                        <span class="nav-label hint"> make or approve changes </span>
+                      </div>
+                      <span class="fa arrow"></span>
+                    </a>
+                    <ul class="nav child_menu">
+                      <li><a href="#">High priority</a></li>
+                      <li><a href="#">Medium priority</a></li>
+                      <li><a href="#">Low priority</a></li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <a>
+                      <img class="label-img" src="images/workflows.png"> 
+                      <div class="label-content">
+                        <span class="nav-label"> Workflows </span> <br>
+                        <span class="nav-label hint"> customize automization </span>
+                      </div>
+                      <span class="fa arrow"></span>
+                    </a>
+                    <ul class="nav child_menu">
+                      <li><a href="#">Standard</a></li>
+                      <li><a href="#">Custom</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- /sidebar menu -->
+          </div>
+        </div>
+
+<!-- -----------------------------------  /Left Menu  ------------------------------------------------- -->        
+
+<!-- -----------------------------------  Top Navigation  ------------------------------------------------- -->
+
+        <!-- top navigation -->
+        <div class="top_nav">
+          <div class="nav_menu">
+            <nav>
+
+              <ul class="nav navbar-nav navbar-left hidden-sm hidden-xs">
+                <li>
+                  <a class="path first-level"> Opportunity </a>
+                </li>
+
+                <li class="">
+                  <a><span class="fa fa-chevron-right"></span></a>
+                </li>
+              </ul>
+
+              <ul class="nav navbar-nav navbar-right">
+                <li class="user-nav">
+                  <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="true"> 
+                    <img class="user-photo"> <span class="user-name"> Hamlet Batista </span> <span class="fa fa-angle-down"></span>
+                  </a>
+                  <ul class="dropdown-menu dropdown-usermenu pull-right">
+                    <li>
+                      <span> 
+                        <img src="images/support.png">
+                        <a href="javascript:;"> Support</a> 
+                      </span>
+                    </li>
+                    <li>
+                      <span>
+                        <img src="images/account.png">
+                        <a href="javascript:;" data-toggle="modal" data-target=".modal-account-settings"> Account </a>
+                      </span>
+                    </li>
+                    <li>
+                      <span>
+                        <img src="images/project_settings.png">
+                        <a href="javascript:;" data-toggle="modal" data-target=".modal-project-settings"> Project Settings </a>
+                      </span>
+                    </li>
+                    <li>
+                      <span>
+                        <img src="images/crawl_settings.png">
+                        <a href="javascript:;"> Crawl Settings </a>
+                      </span>
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="hidden-xs url-nav">
+                  <div class="checkbox right-nav">
+                    <input type="checkbox" class="flat" checked="checked">
+                    <a href="javascript:;" class="website-url dropdown-toggle" data-toggle="dropdown" aria-expanded="true"> 
+                      <span id="topUrl"> www.garrettewide.com </span>
+                      <span class="fa fa-chevron-down"> </span>
+                    </a>
+                    <img class="magnifier" src="images/magnifier.png">
+
+                    <ul class="dropdown-menu dropdown-usermenu pull-right">
+                      <li> <a href="javascript:;" onclick="$('#topUrl').text('www.upwork.com');"> www.upwork.com </a> </li>
+                      <li> <a href="javascript:;" onclick="$('#topUrl').text('www.garrettewide.com');"> www.garrettewide.com </a> </li>
+                    </ul>
+                  </div>
+                </li>
+
+                <li class="invisible">
+                  <a class="upgrade-nav"> Upgrade to PRO </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <!-- /top navigation -->
+
+<!-- -----------------------------------  /Top Navigation  ------------------------------------------------- -->        
+
+
+<!-- -----------------------------------  Main Page  ------------------------------------------------- -->        
+
+        <!-- page content -->
+        <div class="right_col" role="main">
+
+          <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <div class="x_panel tile statistic-panel">
+                <div class="x_title">
+                  <ul class="nav navbar-left navbar-nav">
+                    <li>
+                      <a class="active" panel="seo-pipeline"> The SEO Pipeline </a>
+                    </li>
+
+                    <li>
+                      <a panel="targets"> Targets </a>
+                    </li>
+                  </ul>
+                  <ul class="nav navbar-right panel_toolbox">
+                    <li>
+                      <a class="active"> This week </a>
+                    </li>
+                    <li>
+                      <a> Last week </a>
+                    </li>
+                    <li>
+                      <a> 2 weeks ago </a>
+                    </li>
+                  </ul>
+                  <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+
+<!-- -----------------------------------  SEO Pipeline widgets  ------------------------------------------------- -->
+
+                  <div class="row seo-pipeline">
+                    <div class="col-lg-2 col-md-6 col-sm-6 col-xs-12 div-5">
+                      <div>
+                        <p class="round-rect single-line"> Crawling </p>
+                        <span class="fa fa-chevron-right arrow-yellow arrow-right"> </span>
+                      </div>
+                      <span class="fa fa-chevron-down arrow-yellow arrow-down"> </span>
+                      <br>
+                      <div class="right-border">
+                        <a class="round-rect double-line"> <span> 4,946 </span> <br> <span> $31,738.88 </span> </a>
+                        <br>
+                        <span class="fa fa-chevron-down arrow-yellow arrow-down"> </span>
+                        <br>
+                        <p class="percent" align="center"> 1.71 </p>
+                        <p class="number"> 85 </p>
+                        <p class="description"> Probability of pages at the crawling stage leading to sales </p>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 col-sm-6 col-xs-12 div-5">
+                      <div>
+                        <p class="round-rect single-line"> Indexing </p>
+                        <span class="fa fa-chevron-right arrow-yellow arrow-right"> </span>
+                      </div>
+                      <span class="fa fa-chevron-down arrow-yellow arrow-down"> </span>
+                      <br>
+                      <div class="right-border">
+                        <a class="round-rect double-line"> <span> 1,244 </span> <br> <span> $18,322.472 </span> </a>
+                        <br>
+                        <span class="fa fa-chevron-down arrow-yellow arrow-down"> </span>
+                        <br>
+                        <p class="percent" align="center"> 4.03 </p>
+                        <p class="number"> 49 </p>
+                        <p class="description"> Probability of pages at the crawling stage leading to sales </p>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 col-sm-6 col-xs-12 div-5">
+                      <div>
+                        <p class="round-rect single-line"> Ranking </p>
+                        <span class="fa fa-chevron-right arrow-yellow arrow-right"> </span>
+                      </div>
+                      <span class="fa fa-chevron-down arrow-yellow arrow-down"> </span>
+                      <br>
+                      <div class="right-border">
+                        <a class="round-rect double-line"> <span> 759 </span> <br> <span> $17,200.66 </span> </a>
+                        <br>
+                        <span class="fa fa-chevron-down arrow-yellow arrow-down"> </span>
+                        <br>
+                        <p class="percent" align="center"> 8.81 </p>
+                        <p class="number"> 46 </p>
+                        <p class="description"> Probability of pages at the crawling stage leading to sales </p>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 col-sm-6 col-xs-12 div-5">
+                      <div>
+                        <p class="round-rect single-line"> Presentation </p>
+                        <span class="fa fa-chevron-right arrow-yellow arrow-right"> </span>
+                      </div>
+                      <span class="fa fa-chevron-down arrow-yellow arrow-down"> </span>
+                      <br>
+                      <div class="right-border">
+                        <a class="round-rect double-line"> <span> 4,946 </span> <br> <span> $31,738.88 </span> </a>
+                        <br>
+                        <span class="fa fa-chevron-down arrow-yellow arrow-down"> </span>
+                        <br>
+                        <p class="percent" align="center"> 1.71 </p>
+                        <p class="number"> 134 </p>
+                        <p class="description"> Probability of pages at the crawling stage leading to sales </p>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-2 col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-12 div-5">
+                      <div>
+                        <p class="round-rect single-line"> Potential Profit </p>
+                        <span class="fa fa-chevron-right arrow-yellow arrow-right"> </span>
+                      </div>
+                      <span class="fa fa-chevron-down arrow-yellow arrow-down"> </span>
+                      <br>
+                      <div class="right-border">
+                        <div class="circle">
+                          <p class="profit"> $134,614.06 </p>
+                          <p class="description"> Unclaimed SEO Revenue </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+<!-- -----------------------------------  /SEO Pipeline widgets  ------------------------------------------------- -->
+
+<!-- -----------------------------------  SEO Targets  ------------------------------------------------- -->
+
+                  <div class="row targets" style="display: none;">
+                    <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
+
+<!-- -----------------------------------  SEO Percent Graph  ------------------------------------------------- -->
+
+                      <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                        <svg id="crawlChart" class="chart chart1" fill="#ff4132" viewBox="0 0 100 100" startAngle="0" endAngle="90" thickness="20"> 
+                          <path> </path> 
+                          <text id="txtPercent1"></text> 
+                        </svg>
+
+                        <svg id="indexChart" class="chart chart2" fill="#b622b5" viewBox="0 0 100 100" startAngle="90" endAngle="198" thickness="20"> 
+                          <path> </path> 
+                          <text id="txtPercent2"></text>
+                        </svg>
+
+                        <svg id="rankChart" class="chart chart3" fill="#ff1765" viewBox="0 0 100 100" startAngle="198" endAngle="288" thickness="20"> 
+                          <path> </path> 
+                          <text id="txtPercent3"></text> 
+                        </svg>
+
+                        <svg id="presentationChart" class="chart chart4" fill="#009788" viewBox="0 0 100 100" startAngle="288" endAngle="360" thickness="20"> 
+                          <path> </path> 
+                          <text id="txtPercent4"></text> 
+                        </svg>
+
+                        <svg class="chart" fill="#009788" viewBox="0 0 100 100"> 
+                          <text id="centerText"></text> 
+                        </svg>
+                      </div>
+
+<!-- -----------------------------------  /SEO Percent Graph  ------------------------------------------------- -->
+                      
+<!-- -----------------------------------  SEO Statistics  ------------------------------------------------- -->
+
+                      <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                        <div class="col-md-11 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-8 col-xs-offset-2">
+                            <table class="tile_info">
+                              <tbody>
+                                <tr>
+                                  <td> <p> <i class="fa fa-circle color-crawling-font"></i> Crawling </p> </td>
+                                  <td>$31,783.88</td>
+                                </tr>
+
+                                <tr>
+                                  <td> <p><i class="fa fa-circle color-indexing-font"></i> Indexing </p> </td>
+                                  <td>$71,200.68</td>
+                                </tr>
+
+                                <tr>
+                                  <td> <p><i class="fa fa-circle color-ranking-font"></i> Ranking </p> </td>
+                                  <td>$18,322.47</td>
+                                </tr>
+
+                                <tr>
+                                  <td> <p><i class="fa fa-circle color-presentation-font"></i> Presentation </p> </td>
+                                  <td>$50,106.35</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                        </div>
+                      </div>
+                    </div>
+
+<!-- -----------------------------------  /SEO Statistics  ------------------------------------------------- -->
+
+<!-- -----------------------------------  SEO Slider Bar  ------------------------------------------------- -->
+
+                    <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 set-sliders">
+                      <h2> Set the number of pages to reclaim from each stage: </h2>
+
+                      <div class="slider-control">
+                        <p class="color-crawling-font"> Crawling </p>
+                        <div class="col-lg-9 col-md-10 col-sm-10 col-xs-9">
+                          <input type="text" class="range_time24" value="" name="range" />
+                        </div>
+                        <div class="col-lg-3 col-md-2 col-sm-2 col-xs-3">
+                          <label> $ <span class="color-crawling-font"> 31 </span> K </label>
+                        </div>
+                      </div>
+
+                      <div class="slider-control">
+                        <p class="color-indexing-font"> Indexing </p>
+                        <div class="col-lg-9 col-md-10 col-sm-10 col-xs-9">
+                          <input type="text" class="range_time24" value="" name="range" />
+                        </div>
+                        <div class="col-lg-3 col-md-2 col-sm-2 col-xs-3">
+                          <label> $ <span class="color-indexing-font"> 18 </span> K </label>
+                        </div>
+                      </div>
+
+                      <div class="slider-control">
+                        <p class="color-ranking-font"> Ranking </p>
+                        <div class="col-lg-9 col-md-10 col-sm-10 col-xs-9">
+                          <input type="text" class="range_time24" value="" name="range" />
+                        </div>
+                        <div class="col-lg-3 col-md-2 col-sm-2 col-xs-3">
+                          <label> $ <span class="color-ranking-font"> 17 </span> K </label>
+                        </div>
+                      </div>
+
+                      <div class="slider-control">
+                        <p class="color-presentation-font"> Presentation </p>
+                        <div class="col-lg-9 col-md-10 col-sm-10 col-xs-9">
+                          <input type="text" class="range_time24" value="" name="range" />
+                        </div>
+                        <div class="col-lg-3 col-md-2 col-sm-2 col-xs-3">
+                          <label> $ <span class="color-presentation-font"> 50 </span> K </label>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+<!-- -----------------------------------  /SEO Slider Bar  ------------------------------------------------- -->
+
+<!-- -----------------------------------  /SEO Targets  ------------------------------------------------- -->
+
+            <div class="col-md-4 col-sm-4 col-xs-12" style="display: none;">
+              <div class="x_panel tile fixed_height_320 overflow_hidden">
+                
+                <div class="x_content">
+                  <table class="" style="width:100%">
+                    <tr>
+                      <td>
+                        <canvas id="canvas1" ></canvas>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+<!-- -----------------------------------  SEO Box  ------------------------------------------------- -->
+
+          <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <div class="x_panel">
+                <div class="x_title seo-issues">
+                  <h2> SEO Issues </h2>
+                  
+                  <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                  <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 seo-box cyan-box">
+                      <p class="seo-box-title"> Crawling </p>
+                      <p class="seo-box-number"> 65 </p>
+                      <p class="seo-button"> Learn More <span class="fa fa-chevron-right"></span> </p>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 seo-box purple-box">
+                      <p class="seo-box-title"> Indexing </p>
+                      <p class="seo-box-number"> 13.5 </p>
+                      <p class="seo-button"> Learn More <span class="fa fa-chevron-right"></span> </p>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 seo-box pink-box">
+                      <p class="seo-box-title"> Ranking </p>
+                      <p class="seo-box-number"> 58 </p>
+                      <p class="seo-button"> Learn More <span class="fa fa-chevron-right"></span> </p>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12 seo-box green-box">
+                      <p class="seo-box-title"> Presentation </p>
+                      <p class="seo-box-number"> 1,254 </p>
+                      <p class="seo-button"> Learn More <span class="fa fa-chevron-right"></span> </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+<!-- -----------------------------------  SEO Box  ------------------------------------------------- -->
+
+
+
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <div class="x_panel">
+
+<!-- -----------------------------------  Pages Table Header  ------------------------------------------------- -->        
+
+                <div class="x_title">
+                  <ul class="nav navbar-left navbar-nav">
+                    <li>
+                      <p class="table-title"> pages not indexed <span class="fa fa-chevron-down bound-arrow"> </span> </p>
+                    </li>
+
+                    <li>
+                      <p class="page-count"> 1,244 pages </p>
+                    </li>
+                  </ul>
+                  
+                  <div class="clearfix"></div>
+                </div>
+
+<!-- -----------------------------------  /Pages Table Header  ------------------------------------------------- -->        
+
+                <div class="x_content">
+
+<!-- -----------------------------------  Pages Table  ------------------------------------------------- -->
+
+                  <table id="datatable" class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th>Page <span class="fa fa-sort-down"></span> <span class="fa fa-sort-up"></span> </th>
+                        <th class="hidden-md">Title <span class="fa fa-sort-down"></span> <span class="fa fa-sort-up"></span> </th>
+                        <th>Potential Traffic <span class="fa fa-sort-down"></span> <span class="fa fa-sort-up"></span> </th>
+                        <th>Potential Revenue <span class="fa fa-sort-down"></span> <span class="fa fa-sort-up"></span> </th>
+                        <th># of SEO Issues <span class="fa fa-sort-down"></span> <span class="fa fa-sort-up"></span> </th>
+                      </tr>
+                    </thead>
+
+                    <tbody>
+                      <tr>
+                        <td>www.garrettewade.com</td>
+                        <td>Home page</td>
+                        <td>100</td>
+                        <td>$123</td>
+                        <td>4</td>
+                      </tr>
+                      <tr>
+                        <td>www.garrettewade.com</td>
+                        <td>Home page</td>
+                        <td>100</td>
+                        <td>$123</td>
+                        <td>4</td>
+                      </tr>
+                      <tr>
+                        <td>www.garrettewade.com111</td>
+                        <td>Home page</td>
+                        <td>100</td>
+                        <td>$123</td>
+                        <td>4</td>
+                      </tr>
+                      <tr>
+                        <td>www.garrettewade.com</td>
+                        <td>Home page</td>
+                        <td>100</td>
+                        <td>$123</td>
+                        <td>4</td>
+                      </tr>
+                      <tr>
+                        <td>www.garrettewade.com</td>
+                        <td>Home page</td>
+                        <td>100</td>
+                        <td>$123</td>
+                        <td>4</td>
+                      </tr>
+                      <tr>
+                        <td>www.garrettewade.com</td>
+                        <td>Home page</td>
+                        <td>100</td>
+                        <td>$123</td>
+                        <td>4</td>
+                      </tr>
+                      <tr>
+                        <td>www.garrettewade.com</td>
+                        <td>Home page</td>
+                        <td>100</td>
+                        <td>$123</td>
+                        <td>4</td>
+                      </tr>
+                      <tr>
+                        <td>www.garrettewade.com</td>
+                        <td>Home page</td>
+                        <td>100</td>
+                        <td>$123</td>
+                        <td>4</td>
+                      </tr>
+                      <tr>
+                        <td>www.garrettewade.com</td>
+                        <td>Home page</td>
+                        <td>100</td>
+                        <td>$123</td>
+                        <td>4</td>
+                      </tr>
+                      <tr>
+                        <td>www.garrettewade.com</td>
+                        <td>Home page</td>
+                        <td>100</td>
+                        <td>$123</td>
+                        <td>4</td>
+                      </tr>
+                      <tr>
+                        <td>www.garrettewade.com</td>
+                        <td>Home page</td>
+                        <td>100</td>
+                        <td>$123</td>
+                        <td>4</td>
+                      </tr>
+                      <tr>
+                        <td>www.garrettewade.com</td>
+                        <td>Home page</td>
+                        <td>100</td>
+                        <td>$123</td>
+                        <td>4</td>
+                      </tr>
+                      <tr>
+                        <td>www.garrettewade.com</td>
+                        <td>Home page</td>
+                        <td>100</td>
+                        <td>$123</td>
+                        <td>4</td>
+                      </tr>
+                      <tr>
+                        <td>www.garrettewade.com</td>
+                        <td>Home page</td>
+                        <td>100</td>
+                        <td>$123</td>
+                        <td>4</td>
+                      </tr>
+                      <tr>
+                        <td>www.garrettewade.com</td>
+                        <td>Home page</td>
+                        <td>100</td>
+                        <td>$123</td>
+                        <td>4</td>
+                      </tr>
+                      <tr>
+                        <td>www.garrettewade.com</td>
+                        <td>Home page</td>
+                        <td>100</td>
+                        <td>$123</td>
+                        <td>4</td>
+                      </tr>
+                      <tr>
+                        <td>www.garrettewade.com</td>
+                        <td>Home page</td>
+                        <td>100</td>
+                        <td>$123</td>
+                        <td>4</td>
+                      </tr>
+                      <tr>
+                        <td>www.garrettewade.com</td>
+                        <td>Home page</td>
+                        <td>100</td>
+                        <td>$123</td>
+                        <td>4</td>
+                      </tr>
+                      <tr>
+                        <td>www.garrettewade.com</td>
+                        <td>Home page</td>
+                        <td>100</td>
+                        <td>$123</td>
+                        <td>4</td>
+                      </tr>
+                      <tr>
+                        <td>www.garrettewade.com</td>
+                        <td>Home page</td>
+                        <td>100</td>
+                        <td>$123</td>
+                        <td>4</td>
+                      </tr>
+                      <tr>
+                        <td>www.garrettewade.com</td>
+                        <td>Home page</td>
+                        <td>100</td>
+                        <td>$123</td>
+                        <td>4</td>
+                      </tr>
+                      <tr>
+                        <td>www.garrettewade.com</td>
+                        <td>Home page</td>
+                        <td>100</td>
+                        <td>$123</td>
+                        <td>4</td>
+                      </tr>
+                      <tr>
+                        <td>www.garrettewade.com</td>
+                        <td>Home page</td>
+                        <td>100</td>
+                        <td>$123</td>
+                        <td>4</td>
+                      </tr>
+                      <tr>
+                        <td>www.garrettewade.com</td>
+                        <td>Home page</td>
+                        <td>100</td>
+                        <td>$123</td>
+                        <td>4</td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+<!-- -----------------------------------  /Pages Table  ------------------------------------------------- -->
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!-- -----------------------------------  /Main Page  ------------------------------------------------- -->        
+
+    <!-- jQuery -->
+    <script src="../vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- FastClick -->
+    <script src="../vendors/fastclick/lib/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="../vendors/nprogress/nprogress.js"></script>
+    <!-- Chart.js -->
+    <script src="../vendors/Chart.js/dist/Chart.min.js"></script>
+    <!-- gauge.js -->
+    <script src="../vendors/gauge.js/dist/gauge.min.js"></script>
+    <!-- bootstrap-progressbar -->
+    <script src="../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+    <!-- iCheck -->
+    <script src="../vendors/iCheck/icheck.min.js"></script>
+    <!-- Skycons -->
+    <script src="../vendors/skycons/skycons.js"></script>
+    <!-- Flot -->
+    <script src="../vendors/Flot/jquery.flot.js"></script>
+    <script src="../vendors/Flot/jquery.flot.pie.js"></script>
+    <script src="../vendors/Flot/jquery.flot.time.js"></script>
+    <script src="../vendors/Flot/jquery.flot.stack.js"></script>
+    <script src="../vendors/Flot/jquery.flot.resize.js"></script>
+    <!-- Flot plugins -->
+    <script src="../vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
+    <script src="../vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
+    <script src="../vendors/flot.curvedlines/curvedLines.js"></script>
+    <!-- DateJS -->
+    <script src="../vendors/DateJS/build/date.js"></script>
+    <!-- Ion.RangeSlider -->
+    <script src="../vendors/ion.rangeSlider/js/ion.rangeSlider.min.js"></script>
+    <!-- JQVMap -->
+    <script src="../vendors/jqvmap/dist/jquery.vmap.js"></script>
+    <script src="../vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+    <script src="../vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
+    <!-- bootstrap-daterangepicker -->
+    <script src="js/moment/moment.min.js"></script>
+    <script src="js/datepicker/daterangepicker.js"></script>
+
+    <!-- Custom Theme Scripts -->
+    <script src="../build/js/custom.min.js"></script>
+
+
+    <!-- Datatables -->
+    <script src="../vendors/datatables.net/js/jquery.dataTables.js"></script>
+    <script src="../vendors/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+    <script src="../vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="../vendors/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+    <script src="../vendors/datatables.net-buttons/js/buttons.flash.min.js"></script>
+    <script src="../vendors/datatables.net-buttons/js/buttons.html5.min.js"></script>
+    <script src="../vendors/datatables.net-buttons/js/buttons.print.min.js"></script>
+    <script src="../vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js"></script>
+    <script src="../vendors/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
+    <script src="../vendors/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="../vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
+    <script src="../vendors/datatables.net-scroller/js/datatables.scroller.min.js"></script>
+    <script src="../vendors/jszip/dist/jszip.min.js"></script>
+    <script src="../vendors/pdfmake/build/pdfmake.min.js"></script>
+    <script src="../vendors/pdfmake/build/vfs_fonts.js"></script>
+
+
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+
+    <!-- Bootstrap Colorpicker -->
+    <script src="../vendors/mjolnic-bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js"></script>
+    <!-- jquery.inputmask -->
+    <script src="../vendors/jquery.inputmask/dist/min/jquery.inputmask.bundle.min.js"></script>
+    <!-- jQuery Knob -->
+    <script src="../vendors/jquery-knob/dist/jquery.knob.min.js"></script>
+    <!-- Cropper -->
+    <script src="../vendors/cropper/dist/cropper.min.js"></script>
+
+    <!-- Flot -->
+    <script>
+      $(document).ready(function() {
+        var data1 = [
+          [gd(2012, 1, 1), 17],
+          [gd(2012, 1, 2), 74],
+          [gd(2012, 1, 3), 6],
+          [gd(2012, 1, 4), 39],
+          [gd(2012, 1, 5), 20],
+          [gd(2012, 1, 6), 85],
+          [gd(2012, 1, 7), 7]
+        ];
+
+        var data2 = [
+          [gd(2012, 1, 1), 82],
+          [gd(2012, 1, 2), 23],
+          [gd(2012, 1, 3), 66],
+          [gd(2012, 1, 4), 9],
+          [gd(2012, 1, 5), 119],
+          [gd(2012, 1, 6), 6],
+          [gd(2012, 1, 7), 9]
+        ];
+        $("#canvas_dahs").length && $.plot($("#canvas_dahs"), [
+          data1, data2
+        ], {
+          series: {
+            lines: {
+              show: false,
+              fill: true
+            },
+            splines: {
+              show: true,
+              tension: 0.4,
+              lineWidth: 1,
+              fill: 0.4
+            },
+            points: {
+              radius: 0,
+              show: true
+            },
+            shadowSize: 2
+          },
+          grid: {
+            verticalLines: true,
+            hoverable: true,
+            clickable: true,
+            tickColor: "#d5d5d5",
+            borderWidth: 1,
+            color: '#fff'
+          },
+          colors: ["rgba(38, 185, 154, 0.38)", "rgba(3, 88, 106, 0.38)"],
+          xaxis: {
+            tickColor: "rgba(51, 51, 51, 0.06)",
+            mode: "time",
+            tickSize: [1, "day"],
+            //tickLength: 10,
+            axisLabel: "Date",
+            axisLabelUseCanvas: true,
+            axisLabelFontSizePixels: 12,
+            axisLabelFontFamily: 'Verdana, Arial',
+            axisLabelPadding: 10
+          },
+          yaxis: {
+            ticks: 8,
+            tickColor: "rgba(51, 51, 51, 0.06)",
+          },
+          tooltip: false
+        });
+
+        function gd(year, month, day) {
+          return new Date(year, month - 1, day).getTime();
+        }
+      });
+    </script>
+    <!-- /Flot -->
+
+    <!-- JQVMap -->
+    <script>
+      $(document).ready(function(){
+        $('#world-map-gdp').vectorMap({
+            map: 'world_en',
+            backgroundColor: null,
+            color: '#ffffff',
+            hoverOpacity: 0.7,
+            selectedColor: '#666666',
+            enableZoom: true,
+            showTooltip: true,
+            values: sample_data,
+            scaleColors: ['#E6F2F0', '#149B7E'],
+            normalizeFunction: 'polynomial'
+        });
+      });
+    </script>
+    <!-- /JQVMap -->
+
+    <!-- Skycons -->
+    <script>
+      $(document).ready(function() {
+        var icons = new Skycons({
+            "color": "#73879C"
+          }),
+          list = [
+            "clear-day", "clear-night", "partly-cloudy-day",
+            "partly-cloudy-night", "cloudy", "rain", "sleet", "snow", "wind",
+            "fog"
+          ],
+          i;
+
+        for (i = list.length; i--;)
+          icons.set(list[i], list[i]);
+
+        icons.play();
+      });
+    </script>
+    <!-- /Skycons -->
+
+    <!-- Doughnut Chart -->
+    <script>
+      $(document).ready(function(){
+        var options = {
+          legend: false,
+          responsive: false
+        };
+
+        new Chart(document.getElementById("canvas1"), {
+          type: 'doughnut',
+          tooltipFillColor: "rgba(51, 51, 51, 0.55)",
+          data: {
+            labels: [
+              "Symbian",
+              "Blackberry",
+              "Other",
+              "Android",
+              "IOS"
+            ],
+            datasets: [{
+              data: [15, 20, 30, 10, 30],
+              backgroundColor: [
+                "#BDC3C7",
+                "#9B59B6",
+                "#E74C3C",
+                "#26B99A",
+                "#3498DB"
+              ],
+              hoverBackgroundColor: [
+                "#CFD4D8",
+                "#B370CF",
+                "#E95E4F",
+                "#36CAAB",
+                "#49A9EA"
+              ]
+            }]
+          },
+          options: options
+        });
+      });
+    </script>
+    <!-- /Doughnut Chart -->
+
+    <!-- Ion.RangeSlider -->
+    <script>
+      $(document).ready(function() {
+        $("#range_27").ionRangeSlider({
+          type: "double",
+          min: 1000000,
+          max: 2000000,
+          grid: true,
+          force_edges: true
+        });
+        $("#range").ionRangeSlider({
+          hide_min_max: true,
+          keyboard: true,
+          min: 0,
+          max: 5000,
+          from: 1000,
+          to: 4000,
+          type: 'double',
+          step: 1,
+          prefix: "$",
+          grid: true
+        });
+        $("#range_25").ionRangeSlider({
+          type: "double",
+          min: 1000000,
+          max: 2000000,
+          grid: true
+        });
+        $("#range_26").ionRangeSlider({
+          type: "double",
+          min: 0,
+          max: 10000,
+          step: 500,
+          grid: true,
+          grid_snap: true
+        });
+        $("#range_31").ionRangeSlider({
+          type: "double",
+          min: 0,
+          max: 100,
+          from: 30,
+          to: 70,
+          from_fixed: true
+        });
+        $(".range_min_max").ionRangeSlider({
+          type: "double",
+          min: 0,
+          max: 100,
+          from: 30,
+          to: 70,
+          max_interval: 50
+        });
+        $(".range_time24").ionRangeSlider({
+          min: +moment().subtract(12, "hours").format("X"),
+          max: +moment().format("X"),
+          from: +moment().subtract(6, "hours").format("X"),
+          grid: true,
+          force_edges: true,
+          prettify: function(num) {
+            var m = moment(num, "X");
+            return m.format("Do MMMM, HH:mm");
+          }
+        });
+      });
+    </script>
+    <!-- /Ion.RangeSlider -->
+    
+    <!-- bootstrap-daterangepicker -->
+    <script>
+      $(document).ready(function() {
+
+        var cb = function(start, end, label) {
+          console.log(start.toISOString(), end.toISOString(), label);
+          $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+        };
+
+        var optionSet1 = {
+          startDate: moment().subtract(29, 'days'),
+          endDate: moment(),
+          minDate: '01/01/2012',
+          maxDate: '12/31/2015',
+          dateLimit: {
+            days: 60
+          },
+          showDropdowns: true,
+          showWeekNumbers: true,
+          timePicker: false,
+          timePickerIncrement: 1,
+          timePicker12Hour: true,
+          ranges: {
+            'Today': [moment(), moment()],
+            'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+            'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+            'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+            'This Month': [moment().startOf('month'), moment().endOf('month')],
+            'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+          },
+          opens: 'left',
+          buttonClasses: ['btn btn-default'],
+          applyClass: 'btn-small btn-primary',
+          cancelClass: 'btn-small',
+          format: 'MM/DD/YYYY',
+          separator: ' to ',
+          locale: {
+            applyLabel: 'Submit',
+            cancelLabel: 'Clear',
+            fromLabel: 'From',
+            toLabel: 'To',
+            customRangeLabel: 'Custom',
+            daysOfWeek: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
+            monthNames: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+            firstDay: 1
+          }
+        };
+        $('#reportrange span').html(moment().subtract(29, 'days').format('MMMM D, YYYY') + ' - ' + moment().format('MMMM D, YYYY'));
+        $('#reportrange').daterangepicker(optionSet1, cb);
+        $('#reportrange').on('show.daterangepicker', function() {
+          console.log("show event fired");
+        });
+        $('#reportrange').on('hide.daterangepicker', function() {
+          console.log("hide event fired");
+        });
+        $('#reportrange').on('apply.daterangepicker', function(ev, picker) {
+          console.log("apply event fired, start/end dates are " + picker.startDate.format('MMMM D, YYYY') + " to " + picker.endDate.format('MMMM D, YYYY'));
+        });
+        $('#reportrange').on('cancel.daterangepicker', function(ev, picker) {
+          console.log("cancel event fired");
+        });
+        $('#options1').click(function() {
+          $('#reportrange').data('daterangepicker').setOptions(optionSet1, cb);
+        });
+        $('#options2').click(function() {
+          $('#reportrange').data('daterangepicker').setOptions(optionSet2, cb);
+        });
+        $('#destroy').click(function() {
+          $('#reportrange').data('daterangepicker').remove();
+        });
+      });
+    </script>
+    <!-- /bootstrap-daterangepicker -->
+
+    <!-- gauge.js -->
+    <script>
+      var opts = {
+          lines: 12,
+          angle: 0,
+          lineWidth: 0.4,
+          pointer: {
+              length: 0.75,
+              strokeWidth: 0.042,
+              color: '#1D212A'
+          },
+          limitMax: 'false',
+          colorStart: '#1ABC9C',
+          colorStop: '#1ABC9C',
+          strokeColor: '#F0F3F3',
+          generateGradient: true
+      };
+      var target = document.getElementById('foo'),
+          gauge = new Gauge(target).setOptions(opts);
+
+      gauge.maxValue = 6000;
+      gauge.animationSpeed = 32;
+      gauge.set(3200);
+      gauge.setTextField(document.getElementById("gauge-text"));
+    </script>
+    <!-- /gauge.js -->
+
+    <!-- Datatable -->
+    <script>
+      $(document).ready(function() {
+        var handleDataTableButtons = function() {
+          if ($("#datatable-buttons").length) {
+            $("#datatable-buttons").DataTable({
+              dom: "Bfrtip",
+              buttons: [
+                {
+                  extend: "copy",
+                  className: "btn-sm"
+                },
+                {
+                  extend: "csv",
+                  className: "btn-sm"
+                },
+                {
+                  extend: "excel",
+                  className: "btn-sm"
+                },
+                {
+                  extend: "pdfHtml5",
+                  className: "btn-sm"
+                },
+                {
+                  extend: "print",
+                  className: "btn-sm"
+                },
+              ],
+              responsive: true
+            });
+          }
+        };
+
+        TableManageButtons = function() {
+          "use strict";
+          return {
+            init: function() {
+              handleDataTableButtons();
+            }
+          };
+        }();
+
+        $('#datatable').dataTable();
+
+        $('#datatable-keytable').DataTable({
+          keys: true
+        });
+
+        $('#datatable-responsive').DataTable();
+
+        $('#datatable-scroller').DataTable({
+          ajax: "js/datatables/json/scroller-demo.json",
+          deferRender: true,
+          scrollY: 380,
+          scrollCollapse: true,
+          scroller: true
+        });
+
+        $('#datatable-fixed-header').DataTable({
+          fixedHeader: true
+        });
+
+        var $datatable = $('#datatable-checkbox');
+
+        $datatable.dataTable({
+          'order': [[ 1, 'asc' ]],
+          'columnDefs': [
+            { orderable: false, targets: [0] }
+          ]
+        });
+        $datatable.on('draw.dt', function() {
+          $('input').iCheck({
+            checkboxClass: 'icheckbox_flat-green'
+          });
+        });
+
+        TableManageButtons.init();
+      });
+    </script>
+    <!-- /Datatable -->
+
+    <script>
+      $(document).ready(function() {
+        
+      });
+    </script>
+
+    <script src="js/custom.js"></script>
+  </body>
+</html>
